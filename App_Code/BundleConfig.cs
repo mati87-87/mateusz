@@ -7,6 +7,7 @@ using System.Web.UI;
 
 namespace mateusz
 {
+
     public class BundleConfig
     {
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkID=303951
@@ -34,13 +35,13 @@ namespace mateusz
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
             
-            ScriptManager.ScriptResourceMapping.AddDefinition(
-                "respond",
-                new ScriptResourceDefinition
-                {
-                    Path = "~/Scripts/respond.min.js",
-                    DebugPath = "~/Scripts/respond.js",
-                });
+            //ScriptManager.ScriptResourceMapping.AddDefinition(
+            //    "respond",
+            //    new ScriptResourceDefinition
+            //    {
+            //        Path = "~/Scripts/respond.min.js",
+            //        DebugPath = "~/Scripts/respond.js",
+            //    });
         }
     }
 }
