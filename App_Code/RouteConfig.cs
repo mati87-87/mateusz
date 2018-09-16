@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web;
+using Microsoft.AspNet.Membership.OpenAuth;
 using System.Web.Routing;
 using Microsoft.AspNet.FriendlyUrls;
 
@@ -10,9 +12,7 @@ namespace mateusz
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            var settings = new FriendlyUrlSettings();
-            settings.AutoRedirectMode = RedirectMode.Permanent;
-            routes.EnableFriendlyUrls(settings);
+            routes.EnableFriendlyUrls();
         }
     }
 }

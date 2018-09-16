@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Security.Claims;
-using System.Security.Principal;
+using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
@@ -45,7 +44,7 @@ public partial class SiteMaster : MasterPage
         Page.PreLoad += master_Page_PreLoad;
     }
 
-    protected void master_Page_PreLoad(object sender, EventArgs e)
+    void master_Page_PreLoad(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
@@ -67,10 +66,5 @@ public partial class SiteMaster : MasterPage
     protected void Page_Load(object sender, EventArgs e)
     {
 
-    }
-
-    protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
-    {
-        Context.GetOwinContext().Authentication.SignOut();
     }
 }
