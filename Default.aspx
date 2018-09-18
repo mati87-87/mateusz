@@ -12,6 +12,9 @@
         <p>ssXXXXXXXXXss1</p>
     </div>
         <asp:Label ID="LabelMail" runat="server" Text="Label1"></asp:Label>
+        <p>
+        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" style="height: 26px" />
+        </p>
     </form>
 </body>
 </html>
