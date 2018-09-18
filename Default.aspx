@@ -11,6 +11,7 @@
     <div>
         <p>ssXXXXXXXXXss1</p>
     </div>
+        <asp:Label ID="LabelMail" runat="server" Text="Label1"></asp:Label>
     </form>
 </body>
 </html>
