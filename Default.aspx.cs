@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,7 +19,9 @@ public partial class Start : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        MySql.Data.MySqlClient.MySqlConnection dbConn = new MySql.Data.MySqlClient.MySqlConnection("Persist Security Info=False;server=77.237.11.222;database=mati;uid=user1;password=user1");
+//      MySql.Data.MySqlClient.MySqlConnection dbConn = new MySql.Data.MySqlClient.MySqlConnection("Persist Security Info=False;server=77.237.11.222;database=mati;uid=user1;password=user1");
+        string cnString = ConfigurationManager.ConnectionStrings["MatiDB"].ConnectionString;
+        MySql.Data.MySqlClient.MySqlConnection dbConn = new MySql.Data.MySqlClient.MySqlConnection(cnString);
 
         MySqlCommand cmd = dbConn.CreateCommand();
         cmd.CommandText = "SELECT mail from mati WHERE login ='mat'";
