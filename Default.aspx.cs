@@ -39,7 +39,7 @@ public partial class Start : System.Web.UI.Page
 
         while (reader.Read())
         {
-            flag1 = reader["mail"].ToString();
+            flag1 = reader["mail"].ToString() + "now";
         }
         LabelMail.Text = flag1.ToString();
     }
